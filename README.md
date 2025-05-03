@@ -28,19 +28,86 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 **Procedure**
 
-/* write all the steps invloved */
+Step 1: Open Quartus II in your laptop. 
+
+Step 2: Write code to implement SR flipflop using verilog and validating their functionality using their functional tables. 
+
+Step 3: Run compilation to check for errors. 
+
+Step 4: Open waveform output and load input values. 
+
+Step 5: Run simulation to get the output. 
+
+Step 6: Open in RTL viewers to get RTL diagram output.
+
 
 **PROGRAM**
-
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
-
-Developed by: RegisterNumber:
+UPCOUNTER : 
+```
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+if(rst)
+out<=0;
+else
+out <= out+1;
+end
+endmodule
+```
+DOWNCOUTNER :
+```
+module ex11(out,clk,rst);
+input clk,rst;
+output reg [3:0]out;
+always @ (posedge clk)
+begin
+if(rst)
+out<=0;
+else
+out <= out+1;
+end
+endmodule
+```
+/*
+Developed by: Rithanya D
+RegisterNumber: 212224050038
 */
 
 **RTL LOGIC UP COUNTER**
+UPCOUNTER:
+![image](https://github.com/user-attachments/assets/0a49ce91-d8f0-44c3-8544-bd0ba2bb4109)
+
+DOWNCOUNTER:
+![image](https://github.com/user-attachments/assets/918e3b48-cfb3-4e76-ad08-acac1278bc3a)
+
 
 **TIMING DIAGRAM FOR IP COUNTER**
+UPCOUNTER:
+![image](https://github.com/user-attachments/assets/41f2700a-36b2-433a-ad41-1adcf30646d0)
+
+DOWNCOUNTER:
+![image](https://github.com/user-attachments/assets/d701a02b-b299-4847-9090-4a6ed2208605)
+![image](https://github.com/user-attachments/assets/fe47118b-3c54-4602-ad02-81a6200f51cf)
+
+
 
 **TRUTH TABLE**
 
+
+UPCOUNTER:
+
+
+![image](https://github.com/user-attachments/assets/c40df89a-af3d-49f2-bf82-ec189f6ff6a6)
+
+DOWNCOUNTER:
+
+
+![image](https://github.com/user-attachments/assets/32dd86b8-8a13-4d9a-9a4c-48b99b9de385)
+![image](https://github.com/user-attachments/assets/e5c6e076-4a50-4a27-bc7e-9f2f87e44bb8)
+
+
+
 **RESULTS**
+Thus, the program to implement a 4-bit synchronous up counter using Verilog and to validate its functionality using its truth table was successfully completed.
